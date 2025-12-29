@@ -4,10 +4,99 @@
 
 <head>
 	<link rel="stylesheet" href="styles.css">
+	<title>Tic Tac Toe</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      margin-top: 50px;
+    }
+
+    .container {
+      text-align: center;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      width: 320px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    input {
+      padding: 8px;
+      margin: 5px;
+      width: 90%;
+    }
+
+    button {
+      padding: 8px 15px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+
+    .board {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 5px;
+      margin-top: 20px;
+    }
+
+    .cell {
+      height: 80px;
+      font-size: 32px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid #333;
+      cursor: pointer;
+    }
+
+    .message {
+      margin-top: 15px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
 </head>
 
 <body>
 	<!-- the entire body must be written by student -->
+	<div class="container">
+
+  <!-- Player input section -->
+  <div id="setup">
+    <input type="text" id="player-1" placeholder="Enter Player 1 Name" />
+    <input type="text" id="player-2" placeholder="Enter Player 2 Name" />
+    <br />
+    <button id="submit">Submit</button>
+  </div>
+
+  <!-- Game section -->
+  <div id="game" class="hidden">
+    <h1>Tic Tac Toe</h1>
+    <div class="message"></div>
+
+    <div class="board">
+      <div class="cell" id="1"></div>
+      <div class="cell" id="2"></div>
+      <div class="cell" id="3"></div>
+      <div class="cell" id="4"></div>
+      <div class="cell" id="5"></div>
+      <div class="cell" id="6"></div>
+      <div class="cell" id="7"></div>
+      <div class="cell" id="8"></div>
+      <div class="cell" id="9"></div>
+    </div>
+  </div>
+
+</div>
+
+
     <script type="text/javascript" src="./script.js">
 </script>
 
